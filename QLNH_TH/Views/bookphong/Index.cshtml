@@ -1,0 +1,47 @@
+﻿@model IEnumerable<QLNH_TH.Models.bookphongModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.slnuocuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tiec)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.slnuocuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phong.maphong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tiec.matiec)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

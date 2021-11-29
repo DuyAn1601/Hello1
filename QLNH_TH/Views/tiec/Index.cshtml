@@ -1,0 +1,47 @@
+﻿@model IEnumerable<QLNH_TH.Models.tiecModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tentiec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ngaydat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.khachhang)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tentiec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaydat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.khachhang.makh)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.matiec">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.matiec">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.matiec">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

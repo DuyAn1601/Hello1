@@ -1,0 +1,36 @@
+﻿@model QLNH_TH.Models.bookphongModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>bookphongModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.slnuocuong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.slnuocuong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.phong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.phong.maphong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tiec)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tiec.matiec)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

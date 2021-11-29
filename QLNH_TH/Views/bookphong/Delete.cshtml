@@ -1,0 +1,40 @@
+﻿@model QLNH_TH.Models.bookphongModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>bookphongModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.slnuocuong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.slnuocuong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.phong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.phong.maphong)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tiec)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tiec.matiec)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="matiec" />
+        <input type="hidden" asp-for="maphong" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model QLNH_TH.Models.phongModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>phongModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tenphong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tenphong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.succhua)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.succhua)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.loaiphong)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.loaiphong)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sanh)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sanh.masanh)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.maphong">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

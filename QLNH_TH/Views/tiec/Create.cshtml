@@ -1,0 +1,47 @@
+﻿@model QLNH_TH.Models.tiecModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>tiecModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="matiec" class="control-label"></label>
+                <input asp-for="matiec" class="form-control" />
+                <span asp-validation-for="matiec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tentiec" class="control-label"></label>
+                <input asp-for="tentiec" class="form-control" />
+                <span asp-validation-for="tentiec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ngaydat" class="control-label"></label>
+                <input asp-for="ngaydat" class="form-control" />
+                <span asp-validation-for="ngaydat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="makh" class="control-label"></label>
+                <select asp-for="makh" class ="form-control" asp-items="ViewBag.makh"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
